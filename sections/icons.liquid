@@ -1,0 +1,406 @@
+<style>
+    .icons_Section {
+        background-color: {{section.settings.backgroundColor}};
+    }
+    .icons_Section h3,
+    .icons_Section p {
+        color: {{section.settings.fontColor}};    
+    }
+    .icons_Section a {
+        color: {{section.settings.buttonTextColor}};
+        background: {{section.settings.buttonBgColor}};
+    }
+    @media screen and (min-width: 750px) {
+        .icons_Section {
+            padding-top: {{section.settings.desktop_paddingTop}}px;
+            padding-bottom: {{section.settings.desktop_paddingBottom}}px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        .step_Carousel_inner h2 {
+            padding-bottom: 100px;
+            leading-trim: both;
+            text-edge: cap;
+            font-family: 'Avenir Next';
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 100%; /* 60px */
+        }
+
+        #shopify-section-{{ section.id }} .slick-track {
+            display: flex !important;
+            gap: 40px;
+            margin-left: -40px;
+        }
+    }
+
+    @media screen and (max-width: 749px) {
+        {% if section.settings.layout == "stacked" %}
+         .icons_Section_item{
+           padding: 0px !important;
+         }
+          .icons_Section_item p{
+            padding-bottom: 0px !important;
+          }
+          .icons_Section_item_icon{
+            margin-bottom: 20px !important;
+          }
+        .icons_Section_item h3{
+          font-size: 16px !important;
+        }
+        .icons_Section_item p{
+          font-size: 14px !important;
+        }
+          {% endif %}
+        .icons_Section_Items {
+            display: grid;
+        {% if section.settings.layout == "line" %}
+            grid-template-columns: 1fr !important;
+        {% else %}
+          gap: 20px !important;
+            grid-template-columns: repeat(2, 1fr) !important;  
+        {% endif %}
+        }
+        .icons_Section {
+            padding-top: {{section.settings.mobile_paddingTop}}px;
+            padding-bottom: {{section.settings.mobile_paddingBottom}}px;
+            padding-left: 20px;
+        }
+
+
+
+    
+    }
+
+    .main_step_Carousel {
+        display: flex;
+        gap: 40px;
+    }
+
+    .main_step_Carousel_item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main_step_Carousel_item h5 {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        border-radius: 4px;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Avenir Next';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        max-width: fit-content;
+    }
+
+    .main_step_Carousel_item h3 {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #4A4E58;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Avenir Next';
+        font-size: 24px;
+        padding-top: 20px;
+        margin-bottom: 20px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
+
+    .main_step_Carousel_item {
+        color: #4A4E58;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Avenir Next';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .main_step_Carousel_item_media img {
+        width: 100%;
+        height: auto;
+    }
+
+    .main_step_Carousel_item p {
+        padding-bottom: 40px;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Avenir Next';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #shopify-section_{{section.id}} .slick-dots {
+        display: none !important;
+    }
+
+    .icons_Section_Items {
+        display: grid;
+        {% if section.settings.layout == "line" %}
+            grid-template-columns: repeat(4, 1fr);
+        {% else %}
+            row-gap: 100px;
+            grid-template-columns: repeat(2, 1fr);  
+        {% endif %}
+        align-items: end;
+        justify-content: center;
+    }
+
+    .icons_Section_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .icons_Section_item {
+    }
+
+    .icons_Section_item_icon {
+        margin-bottom: 40px;
+    }
+
+    .icons_Section_item h3 {
+        padding-bottom: 20px;
+        text-align: center;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Avenir Next';
+        {% if section.settings.layout == "line" %}
+            font-size: 16px;
+        {% else %}
+            font-size: 28px;
+        {% endif %}
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
+
+    .icons_Section_item p {
+        padding-bottom: 40px;
+        text-align: center;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Avenir Next';
+        {% if section.settings.layout == "line" %}
+            font-size: 14px;
+        {% else %}
+            font-size: 20px;
+        {% endif %}
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .icons_Section_item a {
+        display: flex;
+        height: 48px;
+        min-width: 172px;
+        padding: 0px 20px;
+        justify-content: center;
+        font-family: 'Avenir Next';
+        align-items: center;
+        gap: 10px;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+    .icons_Section_item h3,
+    .icons_Section_item p,
+    .icons_Section_item a {
+        text-align: center;
+    }
+
+    .icons_Section_item {
+        padding: 20px;
+    }
+</style>
+
+<section class="icons_Section" id="icons_Section-{{ section.id }}">
+    <div class="container">
+        <div class="icons_Section_inner">
+            <div class="icons_Section_Items">
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when "icon" %}
+                            <div class="icons_Section_item"> 
+                                {% if block.settings.icon != blank %}
+                                    <div class="icons_Section_item_icon"> 
+                                        {{ block.settings.icon | image_url:width:block.settings.icon.width | image_tag:loading:'lazy' }}
+                                    </div>
+                                {% else %}
+                                    <div class="icons_Section_item_icon"> 
+                                        {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                                    </div>
+                                {% endif %}
+                              {% if block.settings.headline != blank %}
+                                <h3>{{ block.settings.headline }}</h3>
+                              {% endif %}
+                              {% if block.settings.description != blank %}
+                                <p>{{ block.settings.description }}</p>
+                              {% endif %}
+                              {% if block.settings.buttonUrl != blank %}
+                                <a href="{{ block.settings.buttonUrl }}">{{ block.settings.buttonText }}</a>
+                             {% endif %}
+                            </div>
+                    {% endcase %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Icons Section",
+    "settings": [
+        {
+            "type": "color",
+            "id": "backgroundColor",
+            "label": "Background Color",
+            "default": "#fff"
+        },
+        {
+            "type": "color",
+            "id": "fontColor",
+            "label": "Font Color",
+            "default": "#000"
+        },
+        {
+            "type": "color",
+            "id": "buttonTextColor",
+            "label": "Button Text Color",
+            "default": "#fff"
+        },
+        {
+            "type": "color",
+            "id": "buttonBgColor",
+            "label": "Button Background Color",
+            "default": "#6A6A45"
+        },
+        {
+            "type": "select",
+            "id": "layout",
+            "label": "Layout",
+            "options": [
+                {
+                    "value": "line",
+                    "label": "Line"
+                },
+                {
+                    "value": "stacked",
+                    "label": "Stacked"
+                }
+            ],
+            "default": "line"
+        },
+        {
+            "type": "range",
+            "id": "desktop_paddingTop",
+            "min": 0,
+            "max": 200,
+            "step": 2,
+            "unit": "px",
+            "label": "Desktop padding top",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "desktop_paddingBottom",
+            "min": 0,
+            "max": 200,
+            "step": 2,
+            "unit": "px",
+            "label": "Desktop padding Bottom",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "mobile_paddingTop",
+            "min": 0,
+            "max": 200,
+            "step": 2,
+            "unit": "px",
+            "label": "Mobile padding top",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "mobile_paddingBottom",
+            "min": 0,
+            "max": 200,
+            "step": 2,
+            "unit": "px",
+            "label": "Mobile padding Bottom",
+            "default": 20
+        }
+    ],
+    "blocks": [
+        {
+            "type": "icon",
+            "name": "Icon",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "Icon upload"
+                },
+                {
+                    "type": "text",
+                    "id": "headline",
+                    "label": "Headline",
+                    "default": "Lorem Ipsum Dolor"
+                },
+                {
+                    "type": "text",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "American Made. Built to last."
+                },
+                {
+                    "type": "text",
+                    "id": "buttonText",
+                    "label": "Button Text",
+                    "default": "See More"
+                },
+                {
+                    "type": "url",
+                    "id": "buttonUrl",
+                    "label": "Button Url"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Icons Section",
+            "blocks": [
+                {
+                    "type": "icon"
+                },
+                {
+                    "type": "icon"
+                },
+                {
+                    "type": "icon"
+                },
+                {
+                    "type": "icon"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

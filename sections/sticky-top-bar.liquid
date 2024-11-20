@@ -1,0 +1,364 @@
+{% style %}
+
+ #stickybar-{{ section.id }}.show {
+  display: block !important; /* Show when class is added */
+}
+  
+  
+#stickybar-{{ section.id }} {
+    display: none; /* Hide by default */
+
+  background: {{ section.settings.desktop_bg_color }};
+  position: fixed;
+  top: 0;
+  z-index: 111;
+  width: 100%;
+}
+
+#stickybar-{{ section.id }} .content_left h3,
+#stickybar-{{ section.id }} .stickybar_reviews span,
+#stickybar-{{ section.id }} .content_left span {
+  color: {{ section.settings.desktop_text_color }} !important;
+}
+
+#stickybar-{{ section.id }} .stickybar_price span:nth-child(2) {
+  text-decoration: line-through;
+}
+
+#stickybar-{{ section.id }} .content_right a:hover {
+  background: {{ section.settings.primary_btn_hover_bg_color }};
+  color: {{ section.settings.primary_btn_hover_text_color }};
+  border: 1px solid {{ section.settings.primary_btn_hover_border_color }};
+}
+
+#stickybar-{{ section.id }} .stickybar_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#stickybar-{{ section.id }} .stickybar_price {
+  display: flex;
+  gap: 10px;
+}
+
+#stickybar-{{ section.id }} .stickybar_reviews {
+  display: flex;
+  gap: 10px;
+}
+
+#stickybar-{{ section.id }} .content_left {
+  gap: 10px;
+  padding: 20px 0 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#stickybar-{{ section.id }} .content_left h3 {
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+#stickybar-{{ section.id }} .content_right {
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+}
+
+#stickybar-{{ section.id }} .content_right a {
+  display: flex;
+  min-width: 200px;
+  height: 48px;
+  min-width: 140px;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  gap: 10px;
+  text-decoration: none;
+  background: {{ section.settings.primary_btn_bg_color }};
+  color: {{ section.settings.primary_btn_text_color }};
+  border: 1px solid {{ section.settings.primary_btn_border_color }};
+}
+
+#stickybar-{{ section.id }} .priceContainer span:nth-child(1) {
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+#stickybar-{{ section.id }} .priceContainer span:nth-child(2) {
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 20px;
+  opacity: 0.5;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-decoration-line: strikethrough;
+}
+
+#stickybar-{{ section.id }} .St_total_Reviews {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#stickybar-{{ section.id }} .priceContainer {
+  min-width: 114px;
+}
+
+#stickybar-{{ section.id }} .St_total_Reviews span {
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Avenir;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+@media screen and (min-width: 991px) {
+  #stickybar-{{ section.id }} .stickybar_reviews {
+    display: flex;
+  }
+}
+
+#stickybar-{{ section.id }} .contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#stickybar-{{ section.id }} .priceContainer {
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 990px) {
+  .stickybar_reviews {
+    flex-direction: column;
+  }
+  
+  #stickybar-{{ section.id }} .content_left {
+    padding: 20px 20px 0 20px;
+  }
+  
+  .stickybar_content {
+    flex-direction: column !important;
+    align-items: start !important;
+  }
+
+  #stickybar-{{ section.id }} .content_right {
+    padding: 20px;
+    border-top: 1px solid white;
+    width: 100%;
+  }
+  
+  #stickybar-{{ section.id }} .content_left {
+    align-items: start !important;
+  }
+  
+  #stickybar-{{ section.id }} .content_right a {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  #stickybar-{{ section.id }} .St_total_Reviews {
+    width: 100%;
+  }
+  
+  #stickybar-{{ section.id }} .St_total_Reviews span {
+    font-size: 12px !important;
+  }
+  
+  #stickybar-{{ section.id }} .St_total_Reviews span {
+    margin-bottom: 10px;
+  }
+}
+{% endstyle %}
+
+<section class="stickybar" id="stickybar-{{ section.id }}">
+  <div class="container">
+    <div class="stickybar_inner">
+      <div class="stickybar_content">
+        <div class="content_left">
+          <div class="contentContainer">
+            {% if section.settings.headline != blank %}
+              <h3>{{ section.settings.headline }}</h3>
+            {% endif %}
+            <div class="stickybar_reviews">
+              {% if section.settings.totalReviews != blank %}
+                <div>{{ section.settings.totalReviews | image_url: width: section.settings.totalReviews.width | image_tag: loading: 'lazy' }}</div>
+              {% endif %}
+              <div class="St_total_Reviews">
+                {% if section.settings.numOfReviews != blank %}
+                  <span>{{ section.settings.numOfReviews }}</span>
+                {% endif %}
+                {% if section.settings.gunnerReviews == true %}
+                  <div>{{ section.settings.reviewStars | image_url: width: section.settings.reviewStars.width | image_tag: loading: 'lazy' }}</div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="priceContainer">
+            {% if section.settings.salePrice != blank %}
+              <span>{{ section.settings.salePrice }}</span>
+            {% endif %}
+            {% if section.settings.originalPrice != blank %}
+              <span>{{ section.settings.originalPrice }}</span>
+            {% endif %}
+          </div>
+        </div>
+        <div class="content_right">
+          {% if section.settings.btn_link1 != blank and section.settings.btn_text1 != blank %}
+            <a href="{{ section.settings.btn_link1 }}">{{ section.settings.btn_text1 }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener('scroll', function() {
+    const heroSection = document.querySelector('.banner');
+    const stickyBar = document.querySelector('.stickybar');
+
+    // Get the bottom position of the hero section
+    const heroBottom = heroSection.getBoundingClientRect().bottom;
+
+    // Check if the user has scrolled past the hero section
+    if (heroBottom < 0) {
+        stickyBar.classList.add('show'); // Show sticky bar
+    } else {
+        stickyBar.classList.remove('show'); // Hide sticky bar
+    }
+});
+
+</script>
+{% schema %}
+{
+  "name": "Sticky top bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "GT Kennel"
+    },
+    {
+      "type": "image_picker",
+      "id": "reviewStars",
+      "label": "Reviews Star Icons"
+    },
+    {
+      "type": "text",
+      "id": "numOfReviews",
+      "label": "Number of Reviews",
+      "default": "5,457 Reviews"
+    },
+    {
+      "type": "image_picker",
+      "id": "totalReviews",
+      "label": "Gunner Reviews Badge"
+    },
+    {
+      "type": "checkbox",
+      "id": "gunnerReviews",
+      "label": "10k Gunner Reviews",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "salePrice",
+      "label": "Sale Price",
+      "default": "$100"
+    },
+    {
+      "type": "text",
+      "id": "originalPrice",
+      "label": "Original Price",
+      "default": "$150"
+    },
+    {
+      "type": "text",
+      "id": "btn_text1",
+      "label": "Button1 Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "btn_link1",
+      "label": "Button1 URL"
+    },
+    {
+      "type": "header",
+      "content": "Section Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "desktop_text_color",
+      "label": "Desktop Text Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "desktop_bg_color",
+      "label": "Desktop Background Color",
+      "default": "#E9522E"
+    },
+    {
+      "type": "color",
+      "id": "primary_btn_bg_color",
+      "label": "Button1 BG Color",
+      "default": "#E9522E"
+    },
+    {
+      "type": "color",
+      "id": "primary_btn_text_color",
+      "label": "Button1 Text Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "primary_btn_border_color",
+      "label": "Button1 Border Color",
+      "default": "#E9522E"
+    },
+    {
+      "type": "color",
+      "id": "primary_btn_hover_bg_color",
+      "label": "Button1 Hover BG Color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "primary_btn_hover_text_color",
+      "label": "Button1 Hover Text Color",
+      "default": "#4A4E58"
+    },
+    {
+      "type": "color",
+      "id": "primary_btn_hover_border_color",
+      "label": "Button1 Hover Border Color",
+      "default": "#fff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sticky top bar"
+    }
+  ]
+}
+{% endschema %}

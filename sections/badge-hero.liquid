@@ -1,0 +1,186 @@
+<style>
+  .badge_hero_video,
+  .badge_hero_image{
+    width: 100%;
+    height: auto;
+  }
+  .badge_hero_video video,
+  .badge_hero_image img{
+    width: 100%;
+    height: auto;
+  }
+  .badge_desktopImage,
+  .badge_mobileImage
+  {
+   
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .inner_badgeHero{
+    position: relative;
+  }
+  .badge_desktopImage img,
+  .badge_mobileImage img{
+
+  }
+  @media screen and (min-width: 750px){
+    #badge_hero-{{ section.id }}{
+       padding-top: {{section.settings.desktop_paddingTop}}px;
+       padding-bottom: {{section.settings.desktop_paddingBottom}}px;
+      
+    }
+    .badge_desktopImage{
+      display: flex;
+    }
+  .badge_mobileImage {
+     display: none;
+  }
+  }
+  @media screen and (max-width: 749px){
+    .badge_desktopImage{
+      display: none;
+    }
+  .badge_mobileImage {
+     display: flex;
+  }
+    #badge_hero-{{ section.id }}{
+       padding-top: {{section.settings.mobile_paddingTop}}px;
+       padding-bottom: {{section.settings.mobile_paddingBottom}}px;
+      
+    }
+  }
+</style>
+
+<section class="badge_hero" id="badge_hero-{{ section.id }}" > 
+  <div  class="container">
+      <div class="inner_badgeHero"> 
+              {% if section.settings.bg_type == "background_image" %}
+                {% if section.settings.background_image != blank %}
+        <div class="badge_hero_image"> 
+           {{ section.settings.background_image | image_url:width:section.settings.background_image.width | image_tag:loading:'lazy', class:'badge_hero_bgImage' }}          
+        </div>
+                  {% endif %}
+                {% else %}
+                {% if section.settings.background_video != blank %}
+        <div class="badge_hero_video"> 
+                                {{ section.settings.background_video | video_tag: autoplay: true,  image_size: '2000x', muted: true, loop: true,  class: "video-player" }}
+        </div>
+                  {% endif %}
+        {% endif %}
+        {%  if section.settings.badge_desktopImage != blank %}
+        <div class="badge_desktopImage">
+           {{ section.settings.badge_desktopImage | image_url:width:section.settings.badge_desktopImage.width | image_tag:loading:'lazy', class:'badge_hero_bgImage' }}          
+        </div>
+          {% endif %}
+           {%  if section.settings.badge_mobileImage != blank %}
+        <div class="badge_mobileImage">
+           {{ section.settings.badge_mobileImage | image_url:width:section.settings.badge_mobileImage.width | image_tag:loading:'lazy', class:'badge_hero_bgImage' }}          
+        </div>
+          {% endif %}
+      </div>
+  </div>
+  
+</section>
+
+
+
+{% schema %}
+  {
+    "name": "Badge Hero",
+    "settings": [
+       {
+"type": "select",
+"id": "bg_type",
+        "label": "BG Type",
+"options": [
+      {
+      "value": "background_image",
+      "label": "Background Image"
+      },
+      {
+      "value": "background_video",
+      "label": "Background Video"
+      }
+        ],
+        "default": "background_image",
+        },
+       {
+         "type": "image_picker",
+         "id": "background_image",
+         "label": "Background Image"
+       },
+         
+      {
+         "type": "video",
+         "id": "background_video",
+         "label": "Background Video"
+       },
+      {
+         "type": "image_picker",
+         "id": "badge_desktopImage",
+         "label": "Desktop Badge Upload",
+        "info": "Badge size should be less than 400px"
+       },
+      {
+         "type": "image_picker",
+         "id": "badge_mobileImage",
+         "label": "Mobile Badge Upload",
+        "info": "Badge size should be less than 250px"
+        
+       },
+      {
+        "type": "range",
+        "id": "desktop_paddingTop",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "label": "Desktop padding top",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "desktop_paddingBottom",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "label": "Desktop padding Bottom",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "mobile_paddingTop",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "label": "Mobile padding top",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "mobile_paddingBottom",
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "label": "Mobile padding Bottom",
+        "default": 20
+      },
+     
+    ],
+    "presets": [
+      {
+        "name": "Badge Hero"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,180 @@
+<div>
+  <h2>Build Your Bundle</h2>
+  <div class="bundle_main">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when "bundlebox" %}
+          {% assign product = block.settings.product %}
+          <div class="item">
+            <img src="{{ product.featured_image | image_url }}" height="300px" width="auto" />
+            <h3>{{ product.title }}</h3>
+            <form class="formdata" action="/" method="POST">
+              <input class='mainInput' name="productId" type="hidden" value="{{ product.selected_or_first_available_variant.id }}" />
+              <input class='productImage' type="hidden" value="{{ product.featured_image | image_url }}" />
+              <input class='productPrice' type="hidden" value="{{ product.price | money_without_currency }}" />
+              <input class="quantity" type="number" min="1" value="1" />
+              <button type="submit">Add to Box</button>
+            </form>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <div class="All_bundles">
+    <!-- Bundles will be appended here -->
+    <div class="subtotal">
+      <p>Subtotal: <span class="subtotal-price">$0.00</span></p>
+    </div>
+    <form method="POST" action="/cart/add" class="proceedsubmit">
+    <button  type="submit" class="proceed-to-cart">Proceed to Cart</button>
+  </form>
+    </div>
+</div>
+<script>
+  // Update subtotal based on current bundle items
+  function updateSubtotal() {
+    let subtotal = 0;
+    document.querySelectorAll('.bundle-item').forEach(function(item) {
+      let totalPriceElem = item.querySelector('.total-price');
+      if (totalPriceElem) {
+        let totalPrice = parseFloat(totalPriceElem.textContent.replace('$', ''));
+        if (!isNaN(totalPrice)) {
+          subtotal += totalPrice;
+        }
+      }
+    });
+    document.querySelector('.subtotal-price').textContent = `$${subtotal.toFixed(2)}`;
+  }
+
+  // Handle form submission to add items to the All_bundles div
+  document.querySelectorAll('.formdata').forEach(function(form) {
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Get product details
+      let productImage = this.querySelector(".productImage")?.value;
+      let productPrice = parseFloat(this.querySelector(".productPrice")?.value);
+      let quantity = parseInt(this.querySelector(".quantity")?.value);
+      let productId = this.querySelector(".mainInput")?.value;
+
+      if (productImage && !isNaN(productPrice) && !isNaN(quantity) && productId) {
+        // Calculate total price
+        let totalPrice = productPrice * quantity;
+
+        // Create new bundle item
+        let bundleDiv = document.createElement('div');
+        bundleDiv.classList.add('bundle-item');
+
+        bundleDiv.innerHTML = `
+          <img src="${productImage}" height="100px" width="auto" />
+          <p>Price per item: $${productPrice.toFixed(2)}</p>
+          <p>Total Price: <span class="total-price">$${totalPrice.toFixed(2)}</span></p>
+          <label>Quantity:
+            <input class="editable-quantity" type="number" min="1" value="${quantity}" />
+          </label>
+          <button class="remove-button">Remove</button>
+          <input class="hidden-productId" type="hidden" value="${productId}" />
+        `;
+
+        // Append to .All_bundles
+        document.querySelector('.All_bundles').appendChild(bundleDiv);
+
+        // Update subtotal
+        updateSubtotal();
+
+        // Reset the form
+        this.reset();
+      }
+    });
+  });
+
+  // Update total price when quantity changes
+  document.querySelector('.All_bundles').addEventListener('input', function(event) {
+    if (event.target.classList.contains('editable-quantity')) {
+      let quantityInput = event.target;
+      let bundleItem = quantityInput.closest('.bundle-item');
+      let pricePerItem = parseFloat(bundleItem.querySelector('p').textContent.split(': ')[1].replace('$', ''));
+      let newQuantity = parseInt(quantityInput.value);
+      let newTotalPrice = pricePerItem * newQuantity;
+      bundleItem.querySelector('.total-price').textContent = `$${newTotalPrice.toFixed(2)}`;
+
+      // Update subtotal
+      updateSubtotal();
+    }
+  });
+
+  // Remove bundle item
+  document.querySelector('.All_bundles').addEventListener('click', function(event) {
+    if (event.target.classList.contains('remove-button')) {
+      let bundleItem = event.target.closest('.bundle-item');
+      if (bundleItem) {
+        bundleItem.remove();
+        updateSubtotal();
+      }
+    }
+  });
+
+  // Proceed to cart
+  document.querySelector('.proceedsubmit').addEventListener('submit', function() {
+    event.preventDefault();
+    let mainBundle = document.querySelector(".All_bundles");
+
+    // Get product IDs and quantities
+    let items = [];
+    mainBundle.querySelectorAll('.bundle-item').forEach(function(bundleItem) {
+      let productId = bundleItem.querySelector('.hidden-productId').value;
+      let quantity = parseInt(bundleItem.querySelector('.editable-quantity').value);
+      items.push({
+        id: productId,
+        quantity: quantity
+      });
+    });
+
+    // Create formData object
+    let formData = {
+      'items': items
+    };
+
+    fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+      body: JSON.stringify(formData)
+    })
+    .then(response => response.json() )
+    .then(data => {
+      console.log('Items added to cart:', data);
+      // Optionally redirect or update UI
+    })
+    .catch(error => {
+      console.error('Error adding items to cart:', error);
+      // Optionally show an error message to the user
+    });
+  });
+</script>
+
+
+
+
+{% schema %}
+  {
+    "name": "Bundle Box",
+    "blocks": [
+      {
+        "type": "bundlebox",
+        "name": "Bundle Item",
+        "settings": [
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          }
+        ]
+      }
+    ],
+    "presets":[{
+      "name": "Bundle Box"
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,242 @@
+<style>
+   .badge_split .container .split_inner{
+   display: flex;
+   position: relative;
+   align-items: center;
+   justify-content: center;
+   {% if section.settings.mobile_layout == 'image_right' %}
+   flex-direction: row-reverse;
+   {% endif %}
+   }
+   .badge_split .split_image_with_icon{
+   position: relative;
+   }
+   .badge_split .container .split_icon{
+   position: absolute;
+   z-index: 1;
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   }
+   .split_content,
+   .split_image_with_icon{
+   width: 50%;
+   }
+   .split_icon img{
+   width: 100%;
+   height: auto;
+   margin-right: -100%;
+   }
+   .split_image{
+   display: flex;
+   }
+   .split_image img{
+   width: 100%;
+   height: auto;
+   }
+   .split_content h3,
+   .split_content p,
+   .split_content a 
+   {
+   margin: 15px 0px;
+   color: {{ section.settings.fontColor}};
+   }
+   .split_content h3
+   {
+   font-size: 32px;
+   }
+   .split_content h3{
+   font-size: 24px;
+   }
+   .split_content{
+   padding-left: 10vw;
+   padding-right: 10vw;
+   }
+   .badge_split{
+   background: {{section.settings.backgroundColor}};
+   }
+   @media screen and (max-width: 990px){
+   .badge_split .container .split_inner{
+   {% if section.settings.mobile_layout == 'image_bottom' %}
+   flex-direction: column-reverse;
+   {% else %}
+   flex-direction: column;
+   {% endif %}
+   }
+   {% if section.settings.mobile_layout == 'image_bottom' %}
+   .badge_split .container .split_icon{
+   align-items: start !important;
+   margin: auto !important;
+   }
+   .split_icon img{
+   margin-top: -30%;
+   margin-right: 0% !important;
+   }
+   {% else %}
+   .badge_split .container .split_icon{
+   align-items: end !important;
+   margin: auto !important;
+   }
+   .split_icon img{
+   margin-bottom: -30%;
+   margin-right: 0% !important;
+   }
+   {% endif %}
+   .split_content,
+   .split_image_with_icon{
+   width: 100% !important;
+   }
+   {% if section.settings.mobile_layout == 'image_bottom' %}
+   .split_content{
+   padding: 60px  30px 60px 30px !important;
+   }
+   {% else %}
+   .split_content{
+   padding: 100px  30px 100px 30px !important;
+   }
+   {% endif %}
+   .badge_split .container .split_icon{
+   bottom: 0px;
+   right: 0px !important;
+   left: 0px;
+   }
+   }
+   #shopify-section-{{ section.id }} .page-width{
+   margin: 0px  auto !important ;
+   padding: 0px !important;
+   }
+   .split_icon{
+   width:{{section.settings.badge_width}}px;
+   height: auto;
+   }
+</style>
+<section class="badge_split" id="badge_split-{{ section.id }}">
+   <div class="container">
+      <div class="split_inner">
+         <div class="split_image_with_icon">
+            {% if section.settings.Image != blank %}
+            <div class="split_image">
+               {{ section.settings.Image | image_url:width:section.settings.Image.width | image_tag:loading: 'lazy', class:'hero_mobile'}}
+            </div>
+            {% endif %}
+            {% if section.settings.Image != blank %}
+            <div class="split_icon">
+               {{ section.settings.badgeImage | image_url:width:section.settings.badgeImage.width | image_tag:loading: 'lazy', class:'hero_mobile'}}
+            </div>
+            {% endif %}
+         </div>
+         <div class="split_content">
+            {% if section.settings.Headline != blank %}
+            <h3>{{ section.settings.Headline }}</h3>
+            {% endif %}
+            {% if section.settings.Description != blank %}
+            <p>{{ section.settings.Description }}</p>
+            {% endif %}
+         </div>
+      </div>
+   </div>
+</section>
+<!-- <section class="badgeSplit">
+   <div class="container">
+      <div class="badgeSplit_image"> 
+         <img src="{{ section.settings.Image | image_url }}" height="auto" width="100%" /> 
+         <div class="badgeSplit_badge"> 
+         <img src="{{ section.settings.badgeImage | image_url }}" height="120px" width="auto" /> 
+      
+      </div>
+      </div>
+     <div class="badgeSplit_text"> 
+      <h3>{{ section.settings.Headline }}</h3>
+      <p>{{ section.settings.Description }}</p>
+       
+      </div>
+    
+   </div>
+   </section> -->
+{% schema %}
+{
+"name": "Badge Split",
+"settings": [
+{
+"type": "image_picker",
+"id": "Image",
+"label": "Image Upload"
+},
+{
+"type": "image_picker",
+"id": "badgeImage",
+"label": "Badge Upload"
+},
+{
+"type": "range",
+"id": "badge_width",
+"min": 50,
+"max": 500,
+"step": 10,
+"unit": "px",
+"label": "Badge size",
+"default": 100
+},
+{
+"type": "select",
+"id": "desktop_layout",
+"options": [
+{
+"value": "image_left",
+"label": "Image Left"
+},
+{
+"value": "image_right",
+"label": "Image Right"
+}
+],
+"default": "image_left",
+"label": "Desktop Image Position",
+},
+{
+"type": "select",
+"id": "mobile_layout",
+"options": [
+{
+"value": "image_top",
+"label": "Image Top"
+},
+{
+"value": "image_bottom",
+"label": "Image Bottom"
+}
+],
+"default": "image_top",
+"label": "Mobile Image Position",
+},
+{
+"type": "color",
+"id": "backgroundColor",
+"label": "Background Color"
+},
+{
+"type": "color",
+"id": "fontColor",
+"label": "Font Color"
+},
+{
+"type": "text",
+"id": "Headline",
+"label": "Headline"
+},
+{
+"type": "richtext",
+"id": "Description",
+"label": "Description"
+}
+],
+"presets": [
+{
+"name": "Badge Split"
+}
+]
+}
+{% endschema %}

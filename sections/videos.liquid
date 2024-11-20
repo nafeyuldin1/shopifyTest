@@ -1,0 +1,640 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+
+  <style>
+    .btg_video_section  {
+      position: relative;
+    }
+    .btg_video_section .container {
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+   .btg_video_section  #videosSVG {
+      width: 100%;
+      height: auto;
+      background-color: #FFFCF7;
+      position: absolute;
+      top: 0;
+          z-index: 1;
+     }
+    /* Mobile css start here */
+    .btg_video_section  .mobile--testimonial{
+      display: none !important;
+      gap: 10px;
+    }
+    .btg_video_section .pause--button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .btg_video_section .menu-items {
+      width: fit-content;
+    }
+    .btg_video_section .image--icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      border-width: 2.5px;
+      border-style: solid;
+      color: #fff;
+      padding:3px;
+    }
+    .btg_video_section  img {
+      width: 100%;
+      height: 100%;
+    }
+    .btg_video_section .item-image {
+      display: flex;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .btg_video_section a.item-col {
+      cursor: pointer;
+    }
+    .btg_video_section span.item-label {
+      font-size: 11px;
+      display: block;
+      margin-top: 5px;
+      line-height: 1;
+      font-weight: 700;
+          text-align: center;
+    }
+    .btg_video_section .video-overlay {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      right: 0;
+      z-index: 99;
+      background: #0000009e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0.9);
+      visibility: hidden; 
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease; 
+    }
+    .btg_video_section .video-overlay.show {
+      opacity: 1;
+      transform: scale(1);
+      visibility: visible;
+    }
+    .btg_video_section .video-inner {
+      max-width: 300px;
+      width:100%;
+      margin: auto;
+    }
+    .btg_video_section button.close-btn {
+      cursor: pointer;
+      appearance: none;
+      border: none;
+      background: transparent;
+      outline: none;
+      margin: 0 0 10px auto;
+      color: #fff;
+      padding: 0 !important;
+      display: flex;
+    }
+    .btg_video_section .video_col {
+      display: flex;
+      min-height: 500px;
+      width:100%;
+      height: 100%;
+    }
+    .btg_video_section video.video-player {
+      width: 100%;
+      object-fit: cover;
+      display: flex;
+    }
+    /* desktop css start here */
+    .btg_video_section .serene_video {
+      position: relative;
+    }
+    .btg_video_section #videosSVG {
+      width: 100%;
+      height: auto;
+      background-color: #FFFCF7;
+      position: absolute;
+      top: 0;
+    }
+    .btg_video_section .serene_video .primary_btn:hover {
+      box-shadow: 0 8px 8px #00000040;
+    }
+    .btg_video_section .serene_video .videosbodyguarantee {
+      margin: 24px auto 0;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+    .btg_video_section .serene_video .video_inner {
+      margin-top: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+   .btg_video_section .serene_video video {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 18px;
+    }
+    .btg_video_section .serene_video .video_col {
+      position: relative;
+      margin: 0 15px;
+    }
+  .btg_video_section  .serene_video .pause-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: unset;
+      color: #fff;
+      border: none;
+      border-radius: 100%;
+      padding: 10px 20px;
+      cursor: pointer;
+      z-index: 1;
+      font-size: 40px;
+      transform: translate(-50%, -50%) scale(1);
+      transition: .3s ease-in-out;
+    }
+    .btg_video_section .serene_video .slick-prev {
+      left: -1%;
+      z-index: 99;
+      top: 50%;
+      translate: 50% 50%;
+    }
+    .btg_video_section .serene_video .slick-next {
+      right: 4%;
+      top: 50%;
+      z-index: 99;
+      translate: 50% 50%;
+    }
+   .btg_video_section  .serene_video .slick-prev:before,
+      .btg_video_section .serene_video .slick-next:before {
+      content: "";
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 40px;
+      display: block;
+      height: 40px;
+    }
+    .btg_video_section .serene_video .slick-prev:before {
+      background-image: url(https://cdn.shopify.com/s/files/1/0662/0646/6226/files/svgviewer-output.png?v=1724248523);
+    }
+    .btg_video_section .serene_video .slick-next:before {
+      background-image: url(https://cdn.shopify.com/s/files/1/0662/0646/6226/files/svgviewer-output_1.png?v=1724248523);
+    }
+    .btg_video_section .headline{
+      text-align: center;
+      max-width: 683px;
+      margin: 30px auto;
+      font-size: 36px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+    .btg_video_section .primary_btn {
+      margin: 69px auto 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 412px;
+      align-items: center;
+      padding: 23px 35px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(128deg, rgba(55,89,62,1) 65%, rgba(91,133,99,1) 100%, rgba(0,212,255,1) 100%);
+      border: 2px solid #37593e;
+      line-height: 1;
+      border-radius: 40px;
+      background-size: cover;
+      text-align: center;
+      height: 63px;
+      box-shadow: 0 4px 4px #00000040;
+      transition: .3s ease;
+      text-decoration: none;
+    }
+    .btg_video_section .primary_btn:hover {
+      box-shadow: 0 8px 8px #00000040;
+    }
+    
+    .btg_video_section .videosbodyguarantee {
+    margin: 24px auto 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    }
+    .btg_video_section .videosbodyguarantee p {
+    font-size: 14px;
+    font-weight: 400;
+    margin:0;
+    font-family: Open Sans, sans-serif;
+    }
+    @media screen and (max-width: 767px) {
+      .btg_video_section .headline {
+        font-size: 31px;
+      }
+      .btg_video_section .serene_video {
+        display: none !important;
+      }
+      .btg_video_section  .mobile--testimonial{
+        display: flex !important;
+        overflow-x: scroll;
+        overflow-y: clip;
+        justify-content: center;
+      } 
+       .btg_video_section  .mobile--testimonial::-webkit-scrollbar {
+        display: none; 
+      }
+      .btg_video_section span.item-label {
+        font-size: 8px;
+      }
+    .btg_video_section .image--icon {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    }
+  </style> 
+  {% style %}
+      #btg_video_section-{{ section.id }} {
+        background-color: {{section.settings.bg_color}};
+        padding-top:{{ section.settings.padding_top_desktop }}px;
+        padding-bottom:{{ section.settings.padding_bottom_desktop }}px;
+      }
+      #btg_video_section-{{ section.id }} .headline {
+        color: {{section.settings.text_color}};
+      }
+      #btg_video_section-{{ section.id }} .image--icon {
+        color: {{section.settings.br_color}};
+      }
+    @media screen and (max-width: 767px) {
+      #btg_video_section-{{ section.id }} {
+        padding-top:{{ section.settings.padding_top_mobile }}px;
+        padding-bottom:{{ section.settings.padding_bottom_mobile }}px;
+      }
+    }
+  {% endstyle %}  
+
+  
+<section class="btg_video_section" id="btg_video_section-{{ section.id }}">
+ 
+  <div class="container">
+    
+    {% if section.settings.headline != blank %}
+      <h2 class="headline">{{ section.settings.headline }}</h2>
+    {% endif %}
+    
+     <!-- Desktop strcture -->
+    {% if section.settings.desktop-testimonial %}
+      <div class="serene_video">
+        <div class="video_inner">
+          {% for block in section.blocks %}
+            {%- case block.type -%}
+            {%- when 'desktop-video' -%}
+              <div class="video_col">
+                {% if block.settings.desktop-video != blank %}
+                  {{ block.settings.desktop-video | video_tag: autoplay: false,  loop: true,  image_size: '2000x',  class: "video-player" }}
+                  <button class="pause-button" onclick="toggleVideo(this)">▶</button>
+                {% endif %}
+              </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+       <!-- mobile structure -->
+    {% if section.settings.mobile-testimonial %}
+      <div class="mobile--testimonial">
+        {% for block in section.blocks %}
+          {%- case block.type -%}
+          {%- when 'mobile-block' -%}
+            <div class="testimonial--inner">
+              <div class="menu-items">
+                <a class="item-col">
+                  <div class="image--icon">
+                    {% if block.settings.image != blank %}
+                      <div class="item-image">{{ block.settings.image | image_url: width: block.block.image.width | image_tag: loading: 'lazy' }}</div>
+                    {% endif %}
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 48 48" class="pause--button">
+                      <path fill="white" d="M19.15 32.5 32.5 24l-13.35-8.5ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24q0-4.15 1.575-7.8 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24 4q4.15 0 7.8 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm0-3q7.1 0 12.05-4.975Q41 31.05 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24 41Zm0-17Z"></path>
+                    </svg>
+                  </div>
+                  <span class="item-label">{{ block.settings.item-label }}</span>
+                </a>
+              </div>
+              <div class="video-overlay">
+                <div class="video-inner">
+                  <button class="close-btn">
+                    <svg height="24" width="24" viewBox="0 0 40 40">
+                      <path fill="currentColor" d="m20 21.875-8.5 8.5q-.417.375-.938.375-.52 0-.937-.375-.375-.417-.375-.937 0-.521.375-.938l8.542-8.542-8.542-8.5q-.375-.375-.375-.916 0-.542.375-.917.417-.417.937-.417.521 0 .938.417l8.5 8.5 8.5-8.5q.417-.375.938-.375.52 0 .937.375.375.417.375.938 0 .52-.375.937L21.833 20l8.542 8.542q.375.375.396.916.021.542-.396.917-.375.375-.917.375-.541 0-.916-.375Z"></path>
+                    </svg>
+                  </button>
+                  <div class="video_col">
+                    {% if block.settings.video != blank %}
+                      {{ block.settings.video | video_tag: loop: true, muted:false, autoplay: false, image_size: '1000x', class: "video-player" }}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    <div class="videosbodylink">
+      {% if section.settings.btn_text1 != blank %}
+        <a class="primary_btn" href="{{ section.settings.btn_link1 }}">{{ section.settings.btn_text1 }}
+          <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.3334 9.49992H4.66671M21.3334 9.49992L17.1667 5.33325M21.3334 9.49992L17.1667 13.6666" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      {% endif %}
+      <div class="videosbodyguarantee">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 1.39999C4.8524 1.39999 2.61862 1.88398 2.61862 1.88398L2.6168 1.8858C2.40543 1.92811 2.21522 2.04229 2.07848 2.20894C1.94174 2.37558 1.8669 2.58443 1.86667 2.79999V5.59999C1.86667 10.4524 6.54336 12.4806 6.54336 12.4806C6.68283 12.5589 6.84007 12.6 7 12.6C7.15931 12.5997 7.31589 12.5586 7.45482 12.4806H7.45664C7.45664 12.4806 12.1333 10.4524 12.1333 5.59999V2.79999C12.1334 2.58386 12.0585 2.37438 11.9214 2.20732C11.7843 2.04027 11.5934 1.92598 11.3814 1.88398C11.3814 1.88398 9.1476 1.39999 7 1.39999ZM9.8 4.19999C9.91935 4.19999 10.0387 4.24548 10.1299 4.33671C10.3124 4.51918 10.3124 4.81414 10.1299 4.99661L6.60169 8.52486C6.51396 8.6126 6.39541 8.66158 6.27175 8.66158C6.14808 8.66158 6.02907 8.6126 5.9418 8.52486L4.33034 6.91341C4.14787 6.73094 4.14787 6.43598 4.33034 6.25351C4.51281 6.07104 4.80777 6.07104 4.99024 6.25351L6.27175 7.53502L9.47005 4.33671C9.56129 4.24548 9.68065 4.19999 9.8 4.19999Z" fill="black"></path>
+        </svg>
+        <p>30 Day Money Back Guarantee</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script> 
+document.addEventListener("DOMContentLoaded", (event) => {
+    var currentVideo = null;
+
+    $('#btg_video_section-{{ section.id }} .video_inner').on('click', '.pause-button', function() {
+        var video = $(this).prev('.video-player')[0];
+        var button = $(this);
+
+        if (video.paused) {
+            if (currentVideo && currentVideo.video !== video) {
+                currentVideo.video.pause();
+                currentVideo.button.show();
+            }
+            video.play();
+            button.hide();
+            currentVideo = { video: video, button: button };
+        } else {
+            video.pause();
+            button.show();
+            currentVideo = null;
+        }
+    });
+
+    // Click event for video element itself
+    $('#btg_video_section-{{ section.id }} .video-player').on('click', function() {
+        var video = this;
+        var button = $(this).next('.pause-button');
+
+        if (!video.paused) {
+            video.pause();
+            button.show();
+            currentVideo = null;
+        }
+    });
+
+    window.addEventListener('load', checkScreenWidth);
+    window.addEventListener('resize', checkScreenWidth);
+    checkScreenWidth();
+});
+
+function checkScreenWidth() {
+    // Your responsive logic here (if needed)
+}
+
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('#btg_video_section-{{ section.id }} .video_inner').slick({ // Changed selector here
+      dots: false, // Enable dots navigation
+       arrows: true,
+      speed: 500,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+      slidesToShow: 4,
+   responsive: [
+       {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+    });
+  });
+</script> 
+<!-- script for mobile structure -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const menuItems = document.querySelectorAll('#btg_video_section-{{ section.id }}  .menu-items a.item-col');
+  const videoOverlays = document.querySelectorAll('#btg_video_section-{{ section.id }} .video-overlay');
+  const closeBtns = document.querySelectorAll('#btg_video_section-{{ section.id }} .close-btn');
+
+  menuItems.forEach((item, index) => {
+    item.addEventListener('click', function() {
+      // Hide all overlays first
+      videoOverlays.forEach(overlay => {
+        overlay.classList.remove('show');
+      });
+      // Show the overlay corresponding to the clicked menu item
+      videoOverlays[index].classList.add('show');
+      videoOverlays[index].querySelector('video').play();
+    });
+  });
+
+  closeBtns.forEach((btn, index) => {
+    btn.addEventListener('click', function() {
+      // Hide the corresponding overlay with transition
+      videoOverlays[index].classList.remove('show');
+      videoOverlays[index].querySelector('video').pause();
+    });
+  });
+
+  // Optional: Close the overlay if clicking outside the video area
+  videoOverlays.forEach((overlay,index) => {
+    overlay.addEventListener('click', function(event) {
+      if (!event.target.closest('.video_inner')) {
+        overlay.classList.remove('show');
+        overlay.querySelector('video').pause();
+        console.log(overlay);
+      }
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "HH Video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "See Why Soursop Bitters Is Enjoyed Daily For Amazing Health"
+    },
+    {
+      "type": "text",
+      "id": "btn_text1",
+      "label": "Button Text",
+      "default": "Buy Now & Save 40%"
+    },
+    {
+      "type": "url",
+      "id": "btn_link1",
+      "label": "Button URL"
+    },
+    {
+      "type": "checkbox",
+      "id": "desktop-testimonial",
+      "label": "Desktop Testimonial",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile-testimonial",
+      "label": "Mobile Testimonial",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "color",
+      "id": "br_color",
+      "label": "Border Color",
+      "default": "#f7638f"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#000"
+    },
+    {
+      "type": "header",
+      "content": "Desktop Spacing Settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top Desktop",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom Desktop",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Mobile Spacing Settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 0
+    } 
+  ],
+  "blocks": [
+    {
+      "type": "mobile-block",
+      "name": "Mobile Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "item-label",
+          "label": "Item Label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        }
+      ]
+    },
+    {
+      "type": "desktop-video",
+      "name": "Desktop Video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "desktop-video",
+          "label": "Video"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "HH Video"
+    }
+  ]
+}
+{% endschema %}

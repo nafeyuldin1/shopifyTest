@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "image_ikeGhh": {
+      "type": "image",
+      "settings": {
+        "bgColor": "",
+        "imageWidth": 50,
+        "desktop_paddingTop": 20,
+        "desktop_paddingBottom": 20,
+        "mobile_paddingTop": 20,
+        "mobile_paddingBottom": 20
+      }
+    },
+    "custom_image_text_zLhnPT": {
+      "type": "custom-image-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/i_1.png",
+        "headline": "Lorem ipsum dolor sit amet, consectetur",
+        "desc": "<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p>",
+        "btn_text": "Shop All Kennels",
+        "btn_url": "",
+        "bg_color": "#ffffff",
+        "font_color": "#4a4e58",
+        "primary_btn_bg_color": "#e9522e",
+        "primary_btn_text_color": "#ffffff",
+        "primary_btn_border_color": "#e9522e",
+        "primary_btn_hover_bg_color": "#ffffff",
+        "primary_btn_hover_text_color": "#4a4e58",
+        "primary_btn_hover_border_color": "#ffffff",
+        "padding_top_desktop": 100,
+        "padding_bottom_desktop": 100,
+        "margin_top_desktop": 0,
+        "margin_bottom_desktop": 0,
+        "padding_top_mobile": 40,
+        "padding_bottom_mobile": 40,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0
+      }
+    },
+    "videos_QFMTHP": {
+      "type": "videos",
+      "blocks": {
+        "desktop_video_TkxW4h": {
+          "type": "desktop-video",
+          "settings": {
+            "desktop-video": "shopify:\/\/files\/videos\/19935237-uhd_2560_1440_30fps.mp4"
+          }
+        },
+        "desktop_video_rkCGKX": {
+          "type": "desktop-video",
+          "settings": {
+            "desktop-video": "shopify:\/\/files\/videos\/19935237-uhd_2560_1440_30fps.mp4"
+          }
+        },
+        "desktop_video_zg6jyA": {
+          "type": "desktop-video",
+          "settings": {
+            "desktop-video": "shopify:\/\/files\/videos\/19935237-uhd_2560_1440_30fps.mp4"
+          }
+        },
+        "desktop_video_hY96xF": {
+          "type": "desktop-video",
+          "settings": {
+            "desktop-video": "shopify:\/\/files\/videos\/19935237-uhd_2560_1440_30fps.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "desktop_video_TkxW4h",
+        "desktop_video_rkCGKX",
+        "desktop_video_zg6jyA",
+        "desktop_video_hY96xF"
+      ],
+      "settings": {
+        "headline": "See Why Soursop Bitters Is Enjoyed Daily For Amazing Health",
+        "btn_text1": "",
+        "btn_link1": "",
+        "desktop-testimonial": true,
+        "mobile-testimonial": false,
+        "bg_color": "",
+        "br_color": "#f7638f",
+        "text_color": "#000",
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0
+      }
+    }
+  },
+  "order": [
+    "image_ikeGhh",
+    "custom_image_text_zLhnPT",
+    "videos_QFMTHP"
+  ]
+}
