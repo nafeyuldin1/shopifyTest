@@ -1,95 +1,266 @@
 {
   "sections": {
-    "image_ikeGhh": {
-      "type": "image",
-      "settings": {
-        "bgColor": "",
-        "imageWidth": 50,
-        "desktop_paddingTop": 20,
-        "desktop_paddingBottom": 20,
-        "mobile_paddingTop": 20,
-        "mobile_paddingBottom": 20
-      }
-    },
-    "custom_image_text_zLhnPT": {
-      "type": "custom-image-text",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/i_1.png",
-        "headline": "Lorem ipsum dolor sit amet, consectetur",
-        "desc": "<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p>",
-        "btn_text": "Shop All Kennels",
-        "btn_url": "",
-        "bg_color": "#ffffff",
-        "font_color": "#4a4e58",
-        "primary_btn_bg_color": "#e9522e",
-        "primary_btn_text_color": "#ffffff",
-        "primary_btn_border_color": "#e9522e",
-        "primary_btn_hover_bg_color": "#ffffff",
-        "primary_btn_hover_text_color": "#4a4e58",
-        "primary_btn_hover_border_color": "#ffffff",
-        "padding_top_desktop": 100,
-        "padding_bottom_desktop": 100,
-        "margin_top_desktop": 0,
-        "margin_bottom_desktop": 0,
-        "padding_top_mobile": 40,
-        "padding_bottom_mobile": 40,
-        "margin_top_mobile": 0,
-        "margin_bottom_mobile": 0
-      }
-    },
-    "videos_QFMTHP": {
-      "type": "videos",
+    "hero": {
+      "type": "section-hero",
       "blocks": {
-        "desktop_video_TkxW4h": {
-          "type": "desktop-video",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "desktop-video": "shopify:\/\/files\/videos\/19935237-uhd_2560_1440_30fps.mp4"
+            "title": "Welcome to our store",
+            "heading_size": 11
           }
         },
-        "desktop_video_rkCGKX": {
-          "type": "desktop-video",
+        "text": {
+          "type": "text",
           "settings": {
-            "desktop-video": "shopify:\/\/files\/videos\/19935237-uhd_2560_1440_30fps.mp4"
+            "text": "Shop our latest collection",
+            "text_size": 5
           }
         },
-        "desktop_video_zg6jyA": {
-          "type": "desktop-video",
+        "button": {
+          "type": "button",
           "settings": {
-            "desktop-video": "shopify:\/\/files\/videos\/19935237-uhd_2560_1440_30fps.mp4"
-          }
-        },
-        "desktop_video_hY96xF": {
-          "type": "desktop-video",
-          "settings": {
-            "desktop-video": "shopify:\/\/files\/videos\/19935237-uhd_2560_1440_30fps.mp4"
+            "link_text": "Shop now",
+            "link": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false
           }
         }
       },
       "block_order": [
-        "desktop_video_TkxW4h",
-        "desktop_video_rkCGKX",
-        "desktop_video_zg6jyA",
-        "desktop_video_hY96xF"
+        "heading",
+        "text",
+        "button"
       ],
       "settings": {
-        "headline": "See Why Soursop Bitters Is Enjoyed Daily For Amazing Health",
-        "btn_text1": "",
-        "btn_link1": "",
-        "desktop-testimonial": true,
-        "mobile-testimonial": false,
+        "height": "screen-height-three-quarters",
+        "width": "wrapper--full",
+        "image_1": "",
+        "link": "",
+        "mobile_height": "screen-height-three-quarters--mobile",
+        "flex_align_desktop": "align--middle-center-desktop",
+        "flex_align_mobile": "align--middle-center-mobile",
+        "overlay_opacity": 0,
+        "overlay_color": "#000",
+        "show_overlay_text": false,
         "bg_color": "",
-        "br_color": "#f7638f",
-        "text_color": "#000",
-        "padding_top_desktop": 0,
-        "padding_bottom_desktop": 0,
-        "padding_top_mobile": 0,
-        "padding_bottom_mobile": 0
+        "color": "#FFFFFF",
+        "show_placeholder": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured-collection-1": {
+      "type": "section-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "",
+        "grid": 4,
+        "rows": 1,
+        "show_view_all": true,
+        "bg_color": "",
+        "color": "",
+        "border_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "double": {
+      "type": "section-double",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Image with text",
+            "text_size": 7,
+            "padding_bottom": 16
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text_size": 3,
+            "text_style": "font-body",
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "layout": "is-reversed",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "four-fifty-height-hero--mobile",
+        "width": "wrapper--full",
+        "image_1": "",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "reverse_blocks": false,
+        "bg_color": "",
+        "color": "",
+        "show_placeholder": true,
+        "padding_top": 0,
+        "padding_bottom": 50
+      }
+    },
+    "rich-text": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Rich text",
+            "text_size": 8,
+            "padding_bottom": 16
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text_size": 4,
+            "text_style": "font-body",
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "width": "wrapper",
+        "align_text": "text-center",
+        "overlay_opacity": 0,
+        "overlay_color": "#000",
+        "show_overlay_text": false,
+        "bg_color": "",
+        "color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "featured-collection-2": {
+      "type": "section-collection",
+      "settings": {
+        "title": "Best sellers",
+        "collection": "",
+        "grid": 4,
+        "rows": 1,
+        "show_view_all": true,
+        "bg_color": "",
+        "color": "",
+        "border_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "columns": {
+      "type": "section-columns",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "image_aspect_ratio": 1.2,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Add a title or tagline",
+            "heading_size": 4,
+            "text": "<p>Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "text_size": 3,
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary hero__btn",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "image_aspect_ratio": 1.2,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Add a title or tagline",
+            "heading_size": 4,
+            "text": "<p>Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "text_size": 3,
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary hero__btn",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "image_aspect_ratio": 1.2,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Add a title or tagline",
+            "heading_size": 4,
+            "text": "<p>Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "text_size": 3,
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary hero__btn",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": 5,
+        "layout": "grid",
+        "grid": 3,
+        "align_heading": "text-left",
+        "align_text": "text-center",
+        "align_columns": "flex-align-top",
+        "width": "wrapper--full-padded",
+        "bg_color": "",
+        "color": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "layout_mobile": "slider"
+      }
+    },
+    "featured-posts": {
+      "type": "featured-posts",
+      "settings": {
+        "title": "Blog posts",
+        "blog": "",
+        "post_limit": 3,
+        "blog_show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_tags": false,
+        "padding_top": 50,
+        "padding_bottom": 50
       }
     }
   },
   "order": [
-    "image_ikeGhh",
-    "custom_image_text_zLhnPT",
-    "videos_QFMTHP"
+    "hero",
+    "featured-collection-1",
+    "double",
+    "rich-text",
+    "featured-collection-2",
+    "columns",
+    "featured-posts"
   ]
 }

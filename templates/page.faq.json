@@ -1,0 +1,669 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "subheading_size": 3,
+        "show_title": true,
+        "heading_size": 8,
+        "show_content": true,
+        "text_size": 4,
+        "align_text": "text-center",
+        "width": "wrapper",
+        "bg_color": "#f7f7f7",
+        "color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "faq-first": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "heading_7MkY37": {
+          "type": "heading",
+          "settings": {
+            "title": "Veelgestelde vragen (FAQ)"
+          }
+        },
+        "faq-heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Bestelling & Levering"
+          }
+        },
+        "faq-0": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Welke betaalmethoden accepteert u?",
+            "content": "<p>Wij accepteren Ideal, Bancontact, KBC, Visa, Mastercard, American Express, Apple Pay, Google Pay en andere gangbare betaalmethoden bij het afrekenen.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "faq-1": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Kan ik mijn bestelling nog wijzigen of annuleren nadat ik deze heb geplaatst?",
+            "content": "<p>Zodra een bestelling is geplaatst, beginnen we onmiddellijk met de verwerking ervan. Als u wijzigingen wilt aanbrengen, neem dan zo snel mogelijk contact met ons op. We kunnen wijzigingen niet garanderen, maar we zullen ons best doen om u te helpen.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "faq-2": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Biedt u kortingscodes of promoties aan?",
+            "content": "<p>Ja! Meld u aan voor onze nieuwsbrief om exclusieve kortingen en aanbiedingen te ontvangen.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_rDGAUR": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Waarom is mijn betaling geweigerd?",
+            "content": "<p>Betalingsfouten kunnen optreden als gevolg van onjuiste gegevens, onvoldoende saldo of beveiligingsinstellingen. Probeer een andere betaalmethode of neem contact op met uw bank voor hulp.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_AaBaTW": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Is mijn betalingsinformatie veilig?",
+            "content": "<p>Ja, alle betalingen worden verwerkt via versleutelde en beveiligde platforms. Wij slaan uw betalingsgegevens niet op.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7MkY37",
+        "faq-heading",
+        "faq-0",
+        "faq-1",
+        "faq-2",
+        "question_rDGAUR",
+        "question_AaBaTW"
+      ],
+      "settings": {
+        "width": "wrapper--narrow",
+        "columns": "1",
+        "bg_color": "",
+        "color": "",
+        "border_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "faq-second": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "heading-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Verzending"
+          }
+        },
+        "question-1": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Biedt u gratis verzending aan?",
+            "content": "<p>Ja, wij bieden altijd gratis verzending aan – zonder minimum bestelwaarde.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Naar welke landen leveren jullie?",
+            "content": "<p>Momenteel leveren wij aan Nederland en België. We werken eraan om binnenkort ook aan andere landen te leveren – blijf op de hoogte!</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question-3": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Hoe lang duurt de verzending?",
+            "content": "<p>Nederland & België: 4 tot 12 werkdagen (gratis verzending).</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_Fdqd7p": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Welke koeriersdienst gebruikt u?",
+            "content": "<p>Voor onze leveringen maken we gebruik van betrouwbare koeriersdiensten zoals DHL en PostNL.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_yEHeE8": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Kan ik mijn afleveradres nog wijzigen nadat ik mijn bestelling heb geplaatst?",
+            "content": "<p>Als uw bestelling nog niet is verzonden, kunnen we het adres mogelijk nog wijzigen. Neem zo snel mogelijk contact met ons op.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_rP7V8J": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Kan ik mijn bestelling volgen?",
+            "content": "<p>Ja! Zodra uw bestelling is verzonden, ontvangt u per e-mail een trackingnummer waarmee u uw pakket kunt volgen.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_8nf6eh": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Wat moet ik doen als mijn bestelling niet is aangekomen?",
+            "content": "<p>Als uw bestelling vertraging heeft opgelopen of niet binnen de aangegeven tijd is aangekomen, neem dan contact op met ons ondersteuningsteam via support@storenaam.nl. Wij helpen u graag verder.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        }
+      },
+      "block_order": [
+        "heading-0",
+        "question-1",
+        "question-2",
+        "question-3",
+        "question_Fdqd7p",
+        "question_yEHeE8",
+        "question_rP7V8J",
+        "question_8nf6eh"
+      ],
+      "settings": {
+        "width": "wrapper--narrow",
+        "columns": "1",
+        "bg_color": "#fafafa",
+        "color": "",
+        "border_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "faq-third": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "heading-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Retourneren & ruilen"
+          }
+        },
+        "question-1": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Wat is uw retourbeleid?",
+            "content": "<p>Wij bieden een retourrecht van 30 dagen. Als u niet tevreden bent met uw aankoop, kunt u deze binnen 30 dagen na ontvangst van uw bestelling retourneren.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Hoe start ik een retourzending?",
+            "content": "<p>Neem gewoon contact op met onze klantenservice met uw bestelnummer en de artikelen die u wilt retourneren. Wij begeleiden u dan door de verschillende stappen.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question-3": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Kan ik een artikel ruilen voor een andere maat of kleur?",
+            "content": "<p>Ja, omruilen is mogelijk, mits het artikel op voorraad is. Neem contact met ons op om de beschikbaarheid te controleren en de omruiling te regelen.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_Hmmt6N": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Hoe lang duurt de verwerking van een retourzending?",
+            "content": "<p>Zodra we je retourzending hebben ontvangen, duurt het doorgaans 7 werkdagen voordat je terugbetaling of omruiling is verwerkt.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_zkUpPR": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Wat moet ik doen als ik een beschadigd of verkeerd artikel heb ontvangen?",
+            "content": "<p>Neem onmiddellijk contact met ons op en stuur foto's mee. Wij zullen ervoor zorgen dat het probleem snel wordt opgelost.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_TE4JNg": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Hoe krijg ik mijn terugbetaling?",
+            "content": "<p>Restituties worden uitgevoerd via de oorspronkelijke betaalmethode die bij het afrekenen is gebruikt.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_DedEaH": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Wat gebeurt er als mijn retourzending buiten de termijn van 30 dagen valt?",
+            "content": "<p>Retourzendingen die na afloop van de 30 dagen worden aangevraagd, kunnen wij helaas niet accepteren. Neem echter gerust contact met ons op – wij zullen ons best doen om u te helpen.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_MbGQB6": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Heb ik de originele verpakking nodig om mijn artikel terug te sturen?",
+            "content": "<p>We raden aan om artikelen in de originele verpakking terug te sturen, maar dit is niet verplicht zolang het product tijdens de verzending voldoende beschermd is.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        }
+      },
+      "block_order": [
+        "heading-0",
+        "question-1",
+        "question-2",
+        "question-3",
+        "question_Hmmt6N",
+        "question_zkUpPR",
+        "question_TE4JNg",
+        "question_DedEaH",
+        "question_MbGQB6"
+      ],
+      "settings": {
+        "width": "wrapper--narrow",
+        "columns": "1",
+        "bg_color": "",
+        "color": "",
+        "border_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "section_accordion_group_yYGdVL": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "heading_eVe9gQ": {
+          "type": "heading",
+          "settings": {
+            "title": "Garantie & productproblemen"
+          }
+        },
+        "question_mbMnK3": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Biedt u garantie op uw producten?",
+            "content": "<p>Wij staan achter de kwaliteit van onze producten. Mocht er binnen een redelijke termijn een defect optreden als gevolg van fabricage- of materiaalfouten, neem dan contact met ons op – wij lossen het probleem voor u op.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_dniCnD": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Wat wordt beschouwd als een productdefect?",
+            "content": "<p>Een defect omvat problemen zoals defecte naden, beschadigde stof bij aankomst of defecte ritsen/knopen die bij normaal gebruik optreden.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_7VEVNa": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Hoe meld ik een defect artikel?",
+            "content": "<p>Stuur een e-mail naar onze klantenservice met uw bestelnummer, een beschrijving van het probleem en duidelijke foto's van het defect. Wij nemen zo snel mogelijk contact met u op.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_GUpUhg": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Wat gebeurt er als mijn product een defect vertoont?",
+            "content": "<p>Afhankelijk van het probleem bieden wij een vervangend product, een reparatiemogelijkheid of een terugbetaling aan.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_wtbPUH": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Repareert u artikelen?",
+            "content": "<p>Momenteel bieden wij geen reparaties aan huis aan, maar wij adviseren u graag over oplossingen of bieden in bepaalde gevallen een gedeeltelijke vergoeding aan.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_QVw4Vz": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Mijn artikel is tijdens de levering beschadigd – wat moet ik doen?",
+            "content": "<p>Neem onmiddellijk contact met ons op en stuur foto's van de schade en de verpakking mee. Wij zullen samen met u aan een snelle oplossing werken.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eVe9gQ",
+        "question_mbMnK3",
+        "question_dniCnD",
+        "question_7VEVNa",
+        "question_GUpUhg",
+        "question_wtbPUH",
+        "question_QVw4Vz"
+      ],
+      "name": "Accordion group",
+      "settings": {
+        "width": "wrapper--narrow",
+        "columns": "1",
+        "bg_color": "",
+        "color": "",
+        "border_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "section_accordion_group_EgfXbb": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "heading_8zwf8V": {
+          "type": "heading",
+          "settings": {
+            "title": "Producten & beschikbaarheid"
+          }
+        },
+        "question_PwxcrA": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Hoe weet ik welke maat ik moet bestellen?",
+            "content": "<p>Op elke productpagina vindt u een gedetailleerde maattabel. Als u twijfelt, neem dan gerust contact met ons op voor persoonlijk advies over de maat.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_DdnXAz": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Vallen uw producten qua maat normaal uit?",
+            "content": "<p>Ja, de meeste van onze artikelen vallen normaal qua maat. Bovendien vindt u op elke productpagina pasvorminformatie die u helpt bij het kiezen van de juiste maat.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_qiacbQ": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Waar worden uw producten geproduceerd?",
+            "content": "<p>We werken samen met zorgvuldig geselecteerde partners om een hoogwaardige afwerking en een verantwoorde productie te garanderen. Meer details vindt u op de betreffende productpagina's.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_UALpMx": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Zal een artikel weer beschikbaar zijn als het uitverkocht is?",
+            "content": "<p>Sommige artikelen worden opnieuw geproduceerd afhankelijk van de vraag. U kunt zich op de productpagina aanmelden voor meldingen wanneer deze weer op voorraad zijn, indien beschikbaar.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_7iVRxe": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Kan ik meer informatie krijgen over een bepaald product?",
+            "content": "<p>Natuurlijk. Neem gewoon contact op met onze klantenservice – wij beantwoorden graag al uw vragen over onze producten.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_8Fzjbt": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Hoe moet ik mijn artikel onderhouden?",
+            "content": "<p>De specifieke onderhoudsinstructies vindt u op het label en op de productpagina. Algemeen geldt: binnenstebuiten wassen op 30 °C, niet in de droger drogen en plat in de schaduw drogen.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_aPk6wn": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Kan ik een speciaal ontwerp bestellen?",
+            "content": "<p>Helaas bieden wij momenteel geen maatwerk aan.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8zwf8V",
+        "question_PwxcrA",
+        "question_DdnXAz",
+        "question_qiacbQ",
+        "question_UALpMx",
+        "question_7iVRxe",
+        "question_8Fzjbt",
+        "question_aPk6wn"
+      ],
+      "name": "Accordion group",
+      "settings": {
+        "width": "wrapper--narrow",
+        "columns": "1",
+        "bg_color": "",
+        "color": "",
+        "border_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "section_accordion_group_RBEJRG": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "heading_zMy7RV": {
+          "type": "heading",
+          "settings": {
+            "title": "Klantenservice"
+          }
+        },
+        "question_aGLcwc": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Ik heb een vraag over mijn bestelling – hoe kan ik contact opnemen met de klantenservice?",
+            "content": "<p>U kunt ons bereiken via e-mail of via ons contactformulier. Wij staan van maandag tot en met vrijdag van 09:00 tot 17:00 uur voor u klaar.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_JJeGz4": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Zijn mijn persoonlijke gegevens veilig?",
+            "content": "<p>Ja. We gebruiken veilige systemen om uw gegevens te beschermen en geven uw informatie nooit door zonder uw toestemming.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_gDahXc": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Kan ik direct met iemand spreken?",
+            "content": "<p>Momenteel verwerken we alle klantvragen digitaal om een snelle en duidelijke communicatie te garanderen.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        },
+        "question_fwUqM8": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Hoe snel krijg ik antwoord?",
+            "content": "<p>We streven ernaar om alle vragen binnen 24 uur te beantwoorden.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "#545454"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zMy7RV",
+        "question_aGLcwc",
+        "question_JJeGz4",
+        "question_gDahXc",
+        "question_fwUqM8"
+      ],
+      "name": "Accordion group",
+      "settings": {
+        "width": "wrapper--narrow",
+        "columns": "1",
+        "bg_color": "",
+        "color": "",
+        "border_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq-first",
+    "faq-second",
+    "faq-third",
+    "section_accordion_group_yYGdVL",
+    "section_accordion_group_EgfXbb",
+    "section_accordion_group_RBEJRG"
+  ]
+}

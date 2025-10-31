@@ -1,11 +1,1 @@
-{
-  "sections": {
-    "main": {
-      "type": "main-404",
-      "settings": {}
-    }
-  },
-  "order": [
-    "main"
-  ]
-}
+{"sections":{"main":{"type":"section-404","disabled":true,"settings":{}},"section_hero_cWCqAa":{"type":"section-hero","blocks":{"heading_JyFDaY":{"type":"heading","disabled":true,"settings":{"title":"Elevate Your Style","heading_size":7}},"text_rQL4Qz":{"type":"text","settings":{"description":"Bags met een Tijdloze Uitstraling","text_size":6,"text_style":"font-heading"}},"button_ByzUqm":{"type":"button","settings":{"link_text":"Bekijk Collectie","link":"","button_type":"btn--primary","button_size":"","button_style":"btn--solid","show_arrow":false}}},"block_order":["heading_JyFDaY","text_rQL4Qz","button_ByzUqm"],"name":"Image banner","settings":{"height":"screen-height-three-quarters","width":"wrapper--full","image_1":"shopify:\/\/shop_images\/ChatGPT_Image_19_sep_2025_23_52_27.png","link":"","mobile_height":"screen-height-one-third--mobile","mobile_image":"shopify:\/\/shop_images\/ChatGPT_Image_19_sep_2025_23_52_27.png","flex_align_desktop":"align--middle-center-desktop","flex_align_mobile":"align--bottom-center-mobile","overlay_opacity":0,"overlay_color":"#000000","show_overlay_text":false,"bg_color":"","color":"#121212","show_placeholder":true,"padding_top":0,"padding_bottom":0}}},"order":["main","section_hero_cWCqAa"]}
