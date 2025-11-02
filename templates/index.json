@@ -45,7 +45,7 @@
         "button"
       ],
       "settings": {
-        "height": "screen-height-three-quarters",
+        "height": "screen-height-full",
         "width": "wrapper--full",
         "image_1": "shopify://shop_images/ChatGPT_Image_Nov_2_2025_08_05_11_PM.png",
         "link": "",
