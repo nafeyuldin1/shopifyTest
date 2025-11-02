@@ -25,24 +25,10 @@
             "target_device_enabled": false,
             "target_device": "mobile"
           }
-        },
-        "text_xkV9Xr": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "<p>Geniet van onze tijdelijke <strong>dagdeals</strong>!</p>",
-            "target_url_enabled": false,
-            "target_url": "",
-            "target_referrer_enabled": false,
-            "target_referrer": "",
-            "target_device_enabled": false,
-            "target_device": "mobile"
-          }
         }
       },
       "block_order": [
-        "text_78YNwQ",
-        "text_xkV9Xr"
+        "text_78YNwQ"
       ],
       "settings": {
         "show_border": false,
@@ -108,12 +94,12 @@
         "show_country_name": false,
         "show_country_flag": false,
         "highlight_item": "Sale",
-        "highlight_item_color": "#d02e2e",
-        "transparent_home": false,
+        "highlight_item_color": "#f78d0d",
+        "transparent_home": true,
         "transparent_product_page": false,
-        "transparent_collection": false,
-        "transparent_article": false,
-        "transparent_page": false,
+        "transparent_collection": true,
+        "transparent_article": true,
+        "transparent_page": true,
         "secondary_menu_linklist": "",
         "tertiary_menu_linklist": "",
         "padding_top": 15,
