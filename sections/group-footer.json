@@ -1,1 +1,96 @@
-{"type":"footer","name":"Footer","sections":{"footer":{"type":"footer","blocks":{"text_U3idkG":{"type":"text","settings":{"image_width":150,"title":"Contactgegevens","text":"<p><strong>E-mail: <\/strong>support@storenaam.nl<\/p><p><strong>Openingstijden:<\/strong> van 09:00 tot 17:00 uur van maandag tot en met vrijdag<\/p>","column_width":33,"enable_accordion":true}},"footer-2":{"type":"text","disabled":true,"settings":{"image_width":235,"title":"","text":"<p>✔ Dé bestemming voor <strong>luxe Bags & laarzen <\/strong>voor de moderne vrouw.<\/p><p>✔ <strong>Expertise in stijl & trends<\/strong>– jarenlange ervaring in de modewereld.<\/p><p>✔ <strong>Exclusieve collecties<\/strong>– zorgvuldig geselecteerd voor een tijdloze, luxe uitstraling.<\/p><p>✔ <strong>Snelle & betrouwbare verzending <\/strong>met PostNL, B-Post & DHL (altijd inclusief track & trace).<\/p>","column_width":33,"enable_accordion":false}},"footer-1":{"type":"linklist","settings":{"linklist":"main-menu","title":"Hoofdmenu","column_width":33,"enable_accordion":true}},"footer-0":{"type":"newsletter","settings":{"title":"MELD JE AAN EN BESPAAR!","text":"<p>Meld u aan om speciale aanbiedingen, gratis geschenken en unieke aanbiedingen te ontvangen.<\/p>","show_name":true,"button_text":"Aanmelden","show_arrow":false,"terms":false,"button_type":"btn--black","button_size":"","button_style":"btn--solid","show_social_links":true,"column_width":33}}},"block_order":["text_U3idkG","footer-2","footer-1","footer-0"],"settings":{"logo_image_width":160,"border_color":"#000000","padding_top":75,"padding_bottom":30}},"supporting-menu":{"type":"section-supporting-menu","settings":{"linklist":"","footer_payment_enable":false,"show_locale_selector":true,"show_country_selector":false,"show_country_name":false,"show_country_flag":true,"padding_top":30,"padding_bottom":30}}},"order":["footer","supporting-menu"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text_U3idkG": {
+          "type": "text",
+          "settings": {
+            "image_width": 150,
+            "title": "Contactgegevens",
+            "text": "<p><strong>E-mail: </strong>service@norvana.pl</p>",
+            "column_width": 33,
+            "enable_accordion": true
+          }
+        },
+        "footer-2": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "image_width": 235,
+            "title": "",
+            "text": "<p>✔ Dé bestemming voor <strong>luxe Bags & laarzen </strong>voor de moderne vrouw.</p><p>✔ <strong>Expertise in stijl & trends</strong>– jarenlange ervaring in de modewereld.</p><p>✔ <strong>Exclusieve collecties</strong>– zorgvuldig geselecteerd voor een tijdloze, luxe uitstraling.</p><p>✔ <strong>Snelle & betrouwbare verzending </strong>met PostNL, B-Post & DHL (altijd inclusief track & trace).</p>",
+            "column_width": 33,
+            "enable_accordion": false
+          }
+        },
+        "footer-1": {
+          "type": "linklist",
+          "settings": {
+            "linklist": "main-menu",
+            "title": "Hoofdmenu",
+            "column_width": 33,
+            "enable_accordion": true
+          }
+        },
+        "footer-0": {
+          "type": "newsletter",
+          "disabled": true,
+          "settings": {
+            "title": "MELD JE AAN EN BESPAAR!",
+            "text": "<p>Meld u aan om speciale aanbiedingen, gratis geschenken en unieke aanbiedingen te ontvangen.</p>",
+            "show_name": true,
+            "button_text": "Aanmelden",
+            "show_arrow": false,
+            "terms": false,
+            "button_type": "btn--black",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_social_links": true,
+            "column_width": 33
+          }
+        }
+      },
+      "block_order": [
+        "text_U3idkG",
+        "footer-2",
+        "footer-1",
+        "footer-0"
+      ],
+      "settings": {
+        "logo_image_width": 160,
+        "border_color": "#000000",
+        "padding_top": 75,
+        "padding_bottom": 30
+      }
+    },
+    "supporting-menu": {
+      "type": "section-supporting-menu",
+      "settings": {
+        "linklist": "",
+        "footer_payment_enable": false,
+        "show_locale_selector": true,
+        "show_country_selector": false,
+        "show_country_name": false,
+        "show_country_flag": true,
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "supporting-menu"
+  ]
+}
