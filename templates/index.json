@@ -15,16 +15,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "Welcome to our store",
+            "title": "Welcome to Norvana",
             "heading_size": 11
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "description": "Tell your brand's story through images.",
-            "text_size": 5,
-            "text_style": "font-body"
           }
         },
         "button": {
@@ -41,7 +33,6 @@
       },
       "block_order": [
         "heading",
-        "text",
         "button"
       ],
       "settings": {
