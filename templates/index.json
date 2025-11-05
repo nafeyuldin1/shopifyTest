@@ -157,7 +157,7 @@
     "featured-collection-2": {
       "type": "section-collection",
       "settings": {
-        "heading": "Best Sellers",
+        "heading": "recommended",
         "description": "",
         "layout": "inline",
         "link_text": "Shop Now",
