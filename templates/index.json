@@ -56,10 +56,10 @@
     "featured-collection-1": {
       "type": "section-collection",
       "settings": {
-        "heading": "Best Sellers",
+        "heading": "Najlepiej sprzedające się produkty",
         "description": "",
         "layout": "inline",
-        "link_text": "Shop Now",
+        "link_text": "Kup teraz",
         "link_url": "",
         "button_type": "btn--primary",
         "button_size": "",
@@ -160,7 +160,7 @@
         "heading": "recommended",
         "description": "",
         "layout": "inline",
-        "link_text": "Shop Now",
+        "link_text": "Kup teraz",
         "link_url": "",
         "button_type": "btn--primary",
         "button_size": "",
