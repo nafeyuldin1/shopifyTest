@@ -46,7 +46,7 @@
         "Message": {
           "type": "body",
           "settings": {
-            "title": "Uw bericht",
+            "title": "Twoja wiadomość",
             "required": true
           }
         }
