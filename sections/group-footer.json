@@ -46,7 +46,6 @@
         },
         "footer-0": {
           "type": "newsletter",
-          "disabled": true,
           "settings": {
             "title": "MELD JE AAN EN BESPAAR!",
             "text": "<p>Meld u aan om speciale aanbiedingen, gratis geschenken en unieke aanbiedingen te ontvangen.</p>",
