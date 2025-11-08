@@ -38,7 +38,7 @@
         "footer-1": {
           "type": "linklist",
           "settings": {
-            "linklist": "main-menu",
+            "linklist": "footer",
             "title": "Menu główne",
             "column_width": 33,
             "enable_accordion": true
