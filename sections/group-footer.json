@@ -19,7 +19,7 @@
           "settings": {
             "image_width": 150,
             "title": "Dane kontaktowe",
-            "text": "<p><strong>E-mail: </strong>service@norvana.pl</p>",
+            "text": "<p><strong>E-mail: </strong>service@norvana.pl</p><p><br/><strong>Miejsce</strong>: Warszawa</p><p><strong>godziny otwarcia:</strong> pn–so 8:00–18:00 </p><p><br/><br/><br/></p>",
             "column_width": 33,
             "enable_accordion": true
           }
