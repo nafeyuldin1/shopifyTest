@@ -135,8 +135,8 @@
       "post_error": ""
     },
     "newsletter_form": {
-      "newsletter_email": "Email",
-      "name": "nazwa",
+      "newsletter_email": "Twój e-mail",
+      "name": "Twoje imię",
       "submit": "",
       "placeholder": "",
       "thank_you": "",
