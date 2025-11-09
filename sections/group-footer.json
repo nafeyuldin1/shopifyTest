@@ -47,10 +47,10 @@
         "footer-0": {
           "type": "newsletter",
           "settings": {
-            "title": "MELD JE AAN EN BESPAAR!",
-            "text": "<p>Meld u aan om speciale aanbiedingen, gratis geschenken en unieke aanbiedingen te ontvangen.</p>",
+            "title": "ZAPISZ SIĘ I OSZCZĘDZAJ!",
+            "text": "<p>Zapisz się, aby otrzymywać specjalne oferty, darmowe prezenty i unikalne promocje.</p>",
             "show_name": true,
-            "button_text": "Aanmelden",
+            "button_text": "Zarejestruj się",
             "show_arrow": false,
             "terms": false,
             "button_type": "btn--black",
