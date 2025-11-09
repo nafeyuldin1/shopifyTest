@@ -39,7 +39,7 @@
           "type": "linklist",
           "settings": {
             "linklist": "footer",
-            "title": "Informatie",
+            "title": "Informacje",
             "column_width": 33,
             "enable_accordion": true
           }
